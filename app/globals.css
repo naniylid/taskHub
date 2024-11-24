@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+@layer base {
+    :root {
+        --background: 222 100% 98%;
+        --primary: 0 100% 70%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 0 0% 0%;
+        --radius: 14px;
+    }
+}
+
+* {
+    font-family: var(--font-inter), sans-serif;
+}
