@@ -19,6 +19,9 @@ html {
         --primary-foreground: 0 0% 100%;
         --secondary: 0 0% 0%;
         --radius: 14px;
+        --inProgressColor: 232 100% 50%;
+        --completedColor: 119 99%, 32%;
+        --notStartedColor: 0 89% 53%;
     }
 }
 

@@ -13,8 +13,8 @@ export const Header = () => {
     const searchParams = useSearchParams();
 
     return (
-        <header className='border-b shadow-md bg-[#f8f8f8]'>
-            <Container className='flex items-center justify-between py-8'>
+        <header className='header fixed top-0 left-0 z-10 h-100 w-full border-b shadow-md bg-[#f8f8f8]'>
+            <Container className='flex items-center justify-between py-8 px-2'>
                 <Link href='/'>
                     <div className='flex items-center gap-4'>
                         <h1 className='text-3xl font-black font-semibold'>

@@ -37,6 +37,15 @@ const config: Config = {
                 popover: {
                     DEFAULT: 'hsl(var(--popover))',
                 },
+                inProgressColor: {
+                    DEFAULT: 'hsl(var(--inProgressColor))',
+                },
+                completedColor: {
+                    DEFAULT: 'hsl(var(--completedColor))',
+                },
+                notStartedColor: {
+                    DEFAULT: 'hsl(var(--notStartedColor))',
+                },
             },
             borderRadius: {
                 lg: 'var(--radius)',

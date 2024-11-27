@@ -3,3 +3,5 @@ export { Container } from './Container';
 export { Sidebar } from './Sidebar';
 export { Button } from '../ui/button';
 export { Input } from '../ui/input';
+export { Dashboard } from './dashboard/Dashboard';
+export { TaskCard } from './dashboard/TaskCard/TaskCard';

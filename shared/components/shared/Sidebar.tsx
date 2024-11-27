@@ -9,21 +9,17 @@ import {
     CircleHelp,
     LogOut,
 } from 'lucide-react';
+import photo from '../../../public/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg';
 
 export const Sidebar = () => {
     return (
-        <div className='bg-primary h-screen w-64 flex flex-col items-center py-8 text-white shadow-lg relative'>
+        <div className='bg-primary h-full w-64 flex flex-col items-center py-8 text-white shadow-lg'>
             {/* User Info */}
             <div className='mb-8 flex flex-col items-center relative'>
                 <div className='w-20 h-20 rounded-full overflow-hidden border-2 border-white absolute -top-20'>
-                    <Image
-                        src='/profile.jpg' // Замените на путь к вашему изображению
-                        alt='User Avatar'
-                        width={80}
-                        height={80}
-                    />
+                    <Image src={photo} alt='User Avatar' className='object-cover w-full h-full' />
                 </div>
-                <div className='mt-12 text-center'>
+                <div className='mt-4 text-center '>
                     <h2 className='text-lg font-semibold'>Sundar Gurung</h2>
                     <p className='text-sm text-gray-100'>sundargurung360@gmail.com</p>
                 </div>
