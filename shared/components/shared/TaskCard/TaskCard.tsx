@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 
 interface Props {
@@ -5,8 +7,14 @@ interface Props {
 }
 
 export const TaskCard: React.FC<Props> = ({ status }) => {
+    const [isOpen, setIsOpen] = React.useState<boolean>(false);
+
+    const toggleDropdown = () => {
+        setIsOpen((prev) => !prev);
+    };
+
     return (
-        <div className='taskCard border border-gray-400 rounded-2xl max-w-[402px] px-2'>
+        <div className='taskCard border border-gray-400 rounded-2xl max-w-[402px] px-2 cursor-pointer '>
             <div className='taskCard__wrapper flex  justify-between'>
                 <div className='progress-round py-3'>
                     <svg
@@ -32,9 +40,10 @@ export const TaskCard: React.FC<Props> = ({ status }) => {
                         Attend Nischal’s Birthday Party
                     </h3>
                 </div>
-                <div className='task-settings'>
-                    <button>
+                <div className='task-settings relative'>
+                    <button onClick={toggleDropdown}>
                         <svg
+                            className='hover:fill-gray-600'
                             width='16'
                             height='5'
                             viewBox='0 0 16 5'
@@ -55,6 +64,15 @@ export const TaskCard: React.FC<Props> = ({ status }) => {
                             />
                         </svg>
                     </button>
+
+                    {/* Dropdown */}
+                    {isOpen && (
+                        <ul className='absolute left-0 mt-2 w-30 bg-white shadow-md rounded-md border border-gray-300 z-10 text-xs'>
+                            <li className='px-4 py-2 hover:bg-gray-100 cursor-pointer'>Edit</li>
+                            <li className='px-4 py-2 hover:bg-gray-100 cursor-pointer'>Delete</li>
+                            <li className='px-4 py-2 hover:bg-gray-100 cursor-pointer'>Finish</li>
+                        </ul>
+                    )}
                 </div>
             </div>
 

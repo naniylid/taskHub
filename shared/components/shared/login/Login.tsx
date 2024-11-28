@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { User, LockKeyhole } from 'lucide-react';
 import image from '@/public/login-image.jpg';
 import { CheckboxCustom } from '../../ui/checkbox';
+import { FormInput } from '../../ui/formInput';
 
 export const Login = () => {
     return (
@@ -12,42 +13,24 @@ export const Login = () => {
                 <div className='p-8 max-w-md w-1/2'>
                     <h1 className='text-4xl font-bold mb-6 text-black'>Sign In</h1>
                     <form className='flex flex-col gap-4'>
-                        <div>
-                            <label
-                                className='block hidden text-sm font-medium text-muted-foreground'
-                                htmlFor='username'
-                            >
-                                Username
-                            </label>
-                            <div className='relative'>
+                        <FormInput
+                            icon={
                                 <User className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4' />
-                                <input
-                                    type='text'
-                                    id='username'
-                                    placeholder='Enter Username'
-                                    className='mt-1 block w-full p-2 border border-border rounded-md outline-none focus:ring focus:ring-ring pl-10'
-                                    required
-                                />
-                            </div>
-                        </div>
-                        <div>
-                            <label
-                                className='hidden block text-sm font-medium text-muted-foreground'
-                                htmlFor='password'
-                            >
-                                Password
-                            </label>
-                            <div className='relative'>
+                            }
+                            id='username'
+                            type='text'
+                            placeholder='Enter Username'
+                        />
+
+                        <FormInput
+                            icon={
                                 <LockKeyhole className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4' />
-                                <input
-                                    type='password'
-                                    id='password'
-                                    placeholder='Enter Password'
-                                    className='mt-1 block w-full p-2 border border-border outline-none rounded-md focus:ring focus:ring-ring pl-10'
-                                    required
-                                />
-                            </div>
-                        </div>
+                            }
+                            id='password'
+                            type='password'
+                            placeholder='Enter Password'
+                        />
+
                         <CheckboxCustom label='Remember me' />
                         <button
                             type='submit'

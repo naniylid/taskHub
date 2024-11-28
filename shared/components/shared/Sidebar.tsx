@@ -1,14 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import {
-    LayoutDashboard,
-    AlarmClockCheck,
-    ClipboardCheck,
-    Logs,
-    Settings,
-    CircleHelp,
-    LogOut,
-} from 'lucide-react';
+import { LayoutDashboard, ClipboardCheck, Logs, Settings, CircleHelp, LogOut } from 'lucide-react';
 import photo from '../../../public/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg';
 
 export const Sidebar = () => {
@@ -31,10 +23,7 @@ export const Sidebar = () => {
                     <LayoutDashboard />
                     Dashboard
                 </a>
-                <a href='#' className='flex items-center gap-3 p-3 rounded-lg hover:bg-red-500'>
-                    <AlarmClockCheck />
-                    Vital Task
-                </a>
+
                 <a href='#' className='flex items-center gap-3 p-3 rounded-lg hover:bg-red-500'>
                     <ClipboardCheck />
                     My Task

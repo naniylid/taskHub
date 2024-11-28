@@ -1,9 +1,11 @@
+import { cn } from '@/shared/lib/utils';
 import React from 'react';
 
-export const CheckboxCustom: React.FC<{ label: string; className?: string }> = ({
-    label,
-    className,
-}) => {
+export const CheckboxCustom: React.FC<{
+    label: string | React.ReactNode;
+    className?: string;
+    color?: string;
+}> = ({ label, className, color }) => {
     return (
         <div className={className}>
             <div className='mb-[0.125rem] flex gap-2 align-center items-center min-h-[1.5rem] '>
@@ -14,7 +16,10 @@ export const CheckboxCustom: React.FC<{ label: string; className?: string }> = (
                     id='checkboxChecked'
                     defaultChecked
                 />
-                <label className='hover:cursor-pointer text-sm' htmlFor='checkboxChecked'>
+                <label
+                    className={cn('hover:cursor-pointer text-sm', color)}
+                    htmlFor='checkboxChecked'
+                >
                     {label}
                 </label>
             </div>
