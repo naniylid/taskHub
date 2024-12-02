@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { ThemeProvider } from 'next-themes';
+
 import './globals.css';
 import { Header } from '@/shared/components/shared';
 
@@ -20,10 +22,12 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang='ru'>
+        <html lang='en'>
             <body className={` ${inter.className}`}>
-                <Header />
-                {children}
+                <ThemeProvider attribute='class' defaultTheme='light'>
+                    <Header />
+                    {children}
+                </ThemeProvider>
             </body>
         </html>
     );

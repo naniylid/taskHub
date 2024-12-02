@@ -2,8 +2,8 @@ import Image from 'next/image';
 import React from 'react';
 import image from '@/public/register-image.jpg';
 import { User, UserRoundPen, Mail, LockKeyhole, Lock } from 'lucide-react';
-import { CheckboxCustom } from '../../ui/checkbox';
-import { FormInput } from '../../ui/formInput';
+
+import { CheckboxCustom, FormInput } from '@/shared/components/shared';
 
 export const Register = () => {
     return (

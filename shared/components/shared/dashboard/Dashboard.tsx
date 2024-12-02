@@ -1,7 +1,6 @@
 import React from 'react';
-import { ToDo } from './To-do/ToDo';
-import { TaskStatus } from './TaskStatus/TaskStatus';
-import { Completed } from './Completed';
+
+import { ToDo, TaskStatus, Completed } from '@/shared/components/shared';
 
 export const Dashboard = () => {
     return (

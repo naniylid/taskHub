@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Trash, NotebookPen } from 'lucide-react';
 import taskImage from '@/public/full-task.jpg';
-import { Button } from '../ui/button';
+import { Button } from '@/shared/components/shared';
 
 export const FullTask: React.FC<{ goBack?: boolean }> = ({ goBack }) => {
     return (

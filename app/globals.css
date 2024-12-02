@@ -28,3 +28,11 @@ html {
 * {
     font-family: var(--font-inter), sans-serif;
 }
+
+html {
+    @apply bg-white text-black;
+}
+
+html.dark {
+    @apply bg-[#1f1f1f] text-white;
+}

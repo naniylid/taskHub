@@ -3,8 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { User, LockKeyhole } from 'lucide-react';
 import image from '@/public/login-image.jpg';
-import { CheckboxCustom } from '../../ui/checkbox';
-import { FormInput } from '../../ui/formInput';
+
+import { CheckboxCustom, FormInput } from '@/shared/components/shared';
 
 export const Login = () => {
     return (

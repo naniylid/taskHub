@@ -1,16 +1,22 @@
 import React from 'react';
 import Link from 'next/link';
-import { Input } from '../ui/input';
-import { Radioinput } from '../ui/radioInput';
-import { Button } from '../ui/button';
 
-export const AddTask = () => {
+import { Input, Radioinput, Button, Select } from '@/shared/components/shared';
+
+export const AddTask: React.FC<{ isEdit?: boolean }> = ({ isEdit }) => {
     return (
         <div className='relative bg-white max-w-5xl   w-full border border-gray-300 rounded-2xl shadow-md px-20 py-8'>
             <div className='flex justify-between items-center'>
-                <h2 className='text-lg font-semibold underline decoration-primary underline-offset-4 decoration-2'>
-                    Add New Task
-                </h2>
+                {isEdit ? (
+                    <h2 className='text-lg font-semibold underline decoration-primary underline-offset-4 decoration-2'>
+                        Edit Task
+                    </h2>
+                ) : (
+                    <h2 className='text-lg font-semibold underline decoration-primary underline-offset-4 decoration-2'>
+                        Add New Task
+                    </h2>
+                )}
+
                 <Link className='font-semibold top-4 right-4 hover:underline' href='/'>
                     Go back
                 </Link>
@@ -49,25 +55,25 @@ export const AddTask = () => {
                     <p className='block text-base font-semibold text-muted-foreground'>Priority</p>
                     <div className='flex gap-5 items-center mt-1'>
                         <Radioinput
-                            id='Extreme'
-                            name='Extreme'
+                            id='high'
+                            name='high'
                             className='text-sm text-[#a1a3ab]'
                             label={
                                 <p>
                                     <span className='text-[#FF0000]'>&#8226; </span>
-                                    Extreme
+                                    High
                                 </p>
                             }
                             value=''
                         />
                         <Radioinput
-                            id='Extreme'
-                            name='Extreme'
+                            id='medium'
+                            name='medium'
                             className='text-sm text-[#a1a3ab]'
                             label={
                                 <p>
                                     <span className='text-[#3abeff]'>&#8226; </span>
-                                    Moderate
+                                    Medium
                                 </p>
                             }
                             value=''
@@ -87,6 +93,8 @@ export const AddTask = () => {
                     </div>
                 </div>
 
+                <Select label='Status' />
+
                 <div>
                     <label
                         className='block text-base font-semibold text-muted-foreground'
@@ -96,7 +104,7 @@ export const AddTask = () => {
                     </label>
                     <textarea
                         id='description'
-                        className='mt-1 block w-full overflow-y-scroll max-h-40 border border-border rounded-md p-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none'
+                        className='mt-1 block w-full overflow-y-scroll max-h-40 resize-none border border-border rounded-md p-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none'
                         placeholder='Start writing here...'
                     ></textarea>
                 </div>
