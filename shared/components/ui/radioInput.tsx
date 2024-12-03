@@ -31,7 +31,7 @@ export const Radioinput: React.FC<RadioInputProps> = ({
                 value={value}
                 checked={checked}
                 // onChange={() => onChange(value)}
-                className='w-5 h-5 cursor-pointer accent-blue-500 border-gray-300  focus:ring-blue-200'
+                className='w-5 h-5 cursor-pointer accent-blue-500 border-gray-300  focus:ring-blue-200 '
             />
         </div>
     );

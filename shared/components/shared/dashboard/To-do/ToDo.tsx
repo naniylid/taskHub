@@ -1,5 +1,6 @@
 import React from 'react';
 import { TaskCard } from '../../TaskCard/TaskCard';
+import Link from 'next/link';
 
 export const ToDo = () => {
     return (
@@ -27,8 +28,8 @@ export const ToDo = () => {
                     </svg>
                     <h3 className='text-base text-primary font-medium'>To-Do</h3>
                 </div>
-                <div className='todo-header__right'>
-                    <button className='flex items-center gap-2 text-[#a1a3ab]'>
+                <Link href='/addTask' className='todo-header__right'>
+                    <button className='flex items-center gap-2 text-[#a1a3ab] hover:scale-110'>
                         <svg
                             aria-hidden='true'
                             aria-label='Add task icon'
@@ -45,7 +46,7 @@ export const ToDo = () => {
                         </svg>
                         Add task
                     </button>
-                </div>
+                </Link>
             </div>
             <div className='todo-current-day w-full mt-4 border-b border-[#A1A3AB]'>
                 <div className='todo-current-day_header flex items-center  text-xs'>

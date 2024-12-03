@@ -7,7 +7,7 @@ import { Button } from '@/shared/components/shared';
 
 export const FullTask: React.FC<{ goBack?: boolean }> = ({ goBack }) => {
     return (
-        <div className='fullTask relative bg-white max-w-5xl  w-full border border-gray-300 rounded-2xl shadow-md p-5'>
+        <div className='fullTask relative bg-white max-w-5xl  w-full border border-gray-300 rounded-2xl shadow-md p-5 dark:bg-[#1f1f1f]'>
             {goBack && (
                 <Link className='absolute font-semibold top-4 right-4 hover:underline' href='/'>
                     Go back

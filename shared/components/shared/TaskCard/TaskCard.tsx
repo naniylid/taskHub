@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { Dropdown } from './Dropdown';
 
 interface Props {
     status: string;
@@ -66,13 +67,7 @@ export const TaskCard: React.FC<Props> = ({ status }) => {
                     </button>
 
                     {/* Dropdown */}
-                    {isOpen && (
-                        <ul className='absolute left-0 mt-2 w-30 bg-white shadow-md rounded-md border border-gray-300 z-10 text-xs'>
-                            <li className='px-4 py-2 hover:bg-gray-100 cursor-pointer'>Edit</li>
-                            <li className='px-4 py-2 hover:bg-gray-100 cursor-pointer'>Delete</li>
-                            <li className='px-4 py-2 hover:bg-gray-100 cursor-pointer'>Finish</li>
-                        </ul>
-                    )}
+                    {isOpen && <Dropdown />}
                 </div>
             </div>
 

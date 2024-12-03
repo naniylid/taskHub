@@ -34,13 +34,13 @@ export const Select: React.FC<SelectComponentProps> = ({ label }) => {
                 {label}
             </label>
             <div
-                className='w-full border border-gray-300 rounded-md p-2 bg-white cursor-pointer'
+                className='w-full border border-gray-300 rounded-md p-2 bg-white cursor-pointer dark:bg-[#2E2E2E] dark:placeholder:text-muted-foreground dark:focus-visible:ring-ring dark:focus-visible:ring-offset-0'
                 onClick={toggleDropdown}
             >
                 {selectedOption ? selectedOption.label : 'Select One'}
             </div>
             {isOpen && (
-                <ul className='absolute w-full mt-1 border border-gray-300 bg-white rounded-md shadow-lg z-10'>
+                <ul className='absolute w-full mt-1 border border-gray-300 bg-white rounded-md shadow-lg z-10 dark:bg-[#2E2E2E] dark:placeholder:text-muted-foreground dark:focus-visible:ring-ring dark:focus-visible:ring-offset-0'>
                     {options.map((option) => (
                         <li
                             key={option.value}
