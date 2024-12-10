@@ -23,9 +23,9 @@ export const Select: React.FC<SelectComponentProps> = ({ label }) => {
 
     const options: Option[] = [
         { value: '', label: 'Select One' },
-        { value: 'inProgress', label: 'In Progress' },
-        { value: 'notStarted', label: 'Not Started' },
-        { value: 'completed', label: 'Completed' },
+        { value: 'IN_PROGRESS', label: 'In Progress' },
+        { value: 'NOT_STARTED', label: 'Not Started' },
+        { value: 'COMPLETED', label: 'Completed' },
     ];
 
     return (

@@ -2,8 +2,10 @@
 
 import React from 'react';
 
-import { Input, Radioinput, Button, Select } from '@/shared/components/shared';
+import { Input, Button, Select } from '@/shared/components/shared';
 import { useRouter } from 'next/navigation';
+import { Priority } from './Priority';
+import { TaskDesc } from './TaskDesc';
 
 export const AddTask: React.FC<{ isEdit?: boolean }> = ({ isEdit }) => {
     const router = useRouter();
@@ -58,63 +60,11 @@ export const AddTask: React.FC<{ isEdit?: boolean }> = ({ isEdit }) => {
                     />
                 </div>
 
-                <div>
-                    <p className='block text-base font-semibold text-muted-foreground'>Priority</p>
-                    <div className='flex gap-5 items-center mt-1 '>
-                        <Radioinput
-                            id='high'
-                            name='high'
-                            className='text-sm text-[#a1a3ab]'
-                            label={
-                                <p>
-                                    <span className='text-[#FF0000]'>&#8226; </span>
-                                    High
-                                </p>
-                            }
-                            value=''
-                        />
-                        <Radioinput
-                            id='medium'
-                            name='medium'
-                            className='text-sm text-[#a1a3ab]'
-                            label={
-                                <p>
-                                    <span className='text-[#3abeff]'>&#8226; </span>
-                                    Medium
-                                </p>
-                            }
-                            value=''
-                        />
-                        <Radioinput
-                            id='Extreme'
-                            name='Extreme'
-                            className='text-sm text-[#a1a3ab] '
-                            label={
-                                <p>
-                                    <span className='text-[#05a301]'>&#8226; </span>
-                                    Low
-                                </p>
-                            }
-                            value=''
-                        />
-                    </div>
-                </div>
+                <Priority />
 
                 <Select label='Status' />
 
-                <div>
-                    <label
-                        className='block text-base font-semibold text-muted-foreground'
-                        htmlFor='description'
-                    >
-                        Task Description
-                    </label>
-                    <textarea
-                        id='description'
-                        className='mt-1 block w-full overflow-y-scroll max-h-40 resize-none border border-border rounded-md p-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none dark:bg-[#2E2E2E] dark:placeholder:text-muted-foreground dark:focus-visible:ring-ring dark:focus-visible:ring-offset-0'
-                        placeholder='Start writing here...'
-                    ></textarea>
-                </div>
+                <TaskDesc />
 
                 <Button size={'lg'} type='submit' className='w-1/5'>
                     Done

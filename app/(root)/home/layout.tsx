@@ -1,6 +1,7 @@
 import { Header, Sidebar } from '@/shared/components/shared';
 import type { Metadata } from 'next';
 import { Suspense } from 'react';
+import { ThemeProvider } from 'next-themes';
 
 export const metadata: Metadata = {
     title: 'TaskHub',
@@ -14,7 +15,7 @@ export default function HomeLayout({
     modal: React.ReactNode;
 }>) {
     return (
-        <>
+        <ThemeProvider attribute='class' defaultTheme='light'>
             <Suspense>
                 <Header />
             </Suspense>
@@ -26,6 +27,6 @@ export default function HomeLayout({
                     {modal}
                 </main>
             </div>
-        </>
+        </ThemeProvider>
     );
 }

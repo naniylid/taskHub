@@ -1,9 +1,8 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import { ThemeProvider } from 'next-themes';
 
 import './globals.css';
-import { Header, Sidebar } from '@/shared/components/shared';
+import { Providers } from '@/shared/components/shared/Providers';
 
 const inter = Inter({
     subsets: ['cyrillic'],
@@ -24,9 +23,7 @@ export default function RootLayout({
     return (
         <html lang='en'>
             <body className={` ${inter.className}`}>
-                <ThemeProvider attribute='class' defaultTheme='light'>
-                    {children}
-                </ThemeProvider>
+                <Providers>{children}</Providers>
             </body>
         </html>
     );
